@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+                
+<head>
+    
+        <script  > //Defines creates multiple different variables to be used later in code. 
+                   var  a, b, c, d;
+                   var outputText;
+                   var outputTextb;
+                   var outputTextc;
+                   var outputTextd;
+                   function fn1()         //Defines the first function name as fn1
+                  
+                   {       
+                a = Number(document.getElementById("text1").value); //Defines the value of a, by grabbing the Element of "text1"
+               
+                 if (isNaN(a)) {
+                outputText = "must be a number!"; //alerts user if invalid character is used
+                } else { 
+                 outputText =" Binary =" + a.toString(2) + "<br/>"   + "Octal =" + a.toString(8) + "<br/>" +"Hexadecimal= "+ a.toString(16) ; //calculates binary
+                }
+                
+                document.getElementById("output_text").innerHTML = outputText; //prints output
+                }
+
+
+
+
+                
+                function fn2(){ //Defines the second function name as fn2
+       
+                b = Number((document.getElementById("text2").value)); 
+                 
+
+                if (isNaN(b)) {
+                outputTextb = "must be a number";
+                 } else if (  b < -175765  || b >3231230000000 )  { 
+                outputTextb = "Use numbers between 0 to 1";
+                 } else { 
+                 
+                 outputTextb =" Decimal =" + parseInt(b, 2) + "<br/>"   + "Octal =" + parseInt(b, 2).toString(8) + "<br/>" +"Hexadecimal= "+ parseInt(b, 2).toString(16) ; //calculates decimal
+                }
+                document.getElementById("output_textb").innerHTML = outputTextb; //Prints the output
+               
+                }
+
+
+
+
+
+
+                function fn3(){ //Defines the third function as fn3
+                        c = Number((document.getElementById("text3").value)); //Defines id c, by grabbing the element "text3"
+                 
+
+                 if (isNaN(c)) {
+                 outputTextc = "must be a number"; //Alerts the user if non usable letter is used.
+                  } else if (  c < 0  || c >323123000000 )  {  
+                 outputTextc = "Use numbers between 0 to 7"; //Alerts the user if non usable letter is used.
+                  } else { 
+                  
+                  outputTextc =" Decimal =" + parseInt(c, 8) + "<br/>"   + "Binary =" + parseInt(c, 8).toString(2) + "<br/>" +"Hexadecimal= "+ parseInt(c, 8).toString(16) ; //calculates binary
+                 }
+                 document.getElementById("output_textc").innerHTML = outputTextc; //prints output
+                       
+                 }
+
+
+
+
+                 function fn4(){ //Defines function fn4
+                        d = ((document.getElementById("text4").value)); //Defines the value of D, by grabbing the element from "text4"
+                 
+
+                
+                   if (  d < 0  || d >3231230000 )  {  // Ei toimi, pitäisi saada niin että vain 0-9 ja a-f numeroita/kirjaimia voi käyttää
+                 outputTextd = "Use numbers between 0 to 9 an letters from a to f" ;
+                  } else { 
+                  
+                  outputTextd =" Decimal =" + parseInt(d, 16) + "<br/>"   + "Octal =" + parseInt(d, 16).toString(8) + "<br/>" +"Binary= "+ parseInt(d, 16).toString(2) ; //calculates octal
+                 }
+                 document.getElementById("output_textd").innerHTML = outputTextd; //prints output
+                       
+                 }
+
+                
+                 
+        
+        
+        </script> 
+</head> 
+<body style="background-color: skyblue;">
+ <h1 style="color: red;" id=text_on_screen class=centered>This tool converts BIN, OCT, DEC and HEX numbers.</h1> 
+ <input id="text1" placeholder = "DEC">
+ <input  id="text2" placeholder = "BIN" >
+ <input id="text3" placeholder = "OCT">
+ <input id="text4" placeholder = "HEX">
+ 
+
+<br><br>
+
+ <button onclick ="fn1()" id = "button">Dec print</button>
+ <button onclick ="fn2()" id = "button2">Bin print</button>
+ <button onclick ="fn3()" id = "button3">Oct print</button>
+ <button onclick ="fn4()" id = "button4">Hex print</button>
+
+ <br><br>
+ <output id="output_text">
+ </output>
+ <br><br><br><br><br><br>
+ <output id="output_textb">
+</output>
+<br><br><br><br><br><br>
+ <output id="output_textc">
+</output>
+<br><br><br><br><br><br>
+ <output id="output_textd">
+</output>
+
+</body>
+ 
+ 
+    
+               
+        
+    
+    
+</body>
+</html>
+</html>

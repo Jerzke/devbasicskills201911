@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style> .centered
+        {
+            text-align: center;
+            margin: 64px auto;
+        }
+        input{
+            padding:5px; 
+            margin:5px;
+        }
+    .content
+
+    {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width:40%;
+        margin-left: 28%
+    }
+    
+</style>
+<script type="text/javascript">
+function fn1()
+{
+//variables for min and max
+var box3 = Number(document.getElementById("text1").value);
+var box4 = Number(document.getElementById("text2").value) ;
+//variable for the amount of numbers to enter
+var amount_of_numbers = Number(document.getElementById("numbers").value);
+//the array to store all of the numbers the user entered
+var numbers = [];
+//the index variable for generating the correct number of numbers (starts at 0 and goes to amount_of_numbers - 1)
+var  i = 0;
+//generate the given number of random numbers
+for (i = 0; i < amount_of_numbers; i++)
+{
+numbers.push(Math.floor(Math.random() * (box3 - box4 + 1) + box4)); // Add the random number to the array
+}
+
+numbers.sort((a,b)=>a-b) //Sorts the numbers inside array in order
+
+for (let index = box4; index < box3 + 1; index++) //This for loop finds the amount of times a set number occurs inside the array    
+{
+let first = numbers.indexOf(index) ;
+let last = numbers.lastIndexOf(index) ; 
+let occurances = (last - first + 1) ; 
+var div = document.createElement("div"); // This variable creates a div for the numbers.
+
+
+document.getElementById("occurances").appendChild(div).id=index; 
+if (occurances < 1){ 
+    occurances = 0 //this if statement changes the value of occurances to 0 if its smaller then 1
+}
+document.getElementById(index).innerHTML = index + " occurances " + occurances ;//This prints the results of the for loop inside the div's
+
+}
+
+
+document.getElementById("text3").value = Number(box3); //Defines value for "text3"
+document.getElementById("text4").value = Number(box4);//Defines value for "text4"
+document.getElementById("text5").value = numbers.toString(); //Defines value for "text5"
+}
+</script>
+
+</head> 
+ 
+<body style="background-color: skyblue">
+    
+       <div class=content>
+    
+<h1 style="color: red">This site is a Random Number Generator!</h1>
+<input id="text1" placeholder = "Max Number" size="35" > <br> <br>
+<input id="text2" placeholder = "Min Number" size="35">
+<input id="numbers" placeholder = "How many numbers?" size="35">
+<button onclick ="fn1()" id = "button">Print</button>
+<output id="text3"> </output> <output id="text4"> </output>
+<output id="text5"> </output> <br><br>
+<output id="numbersamount"></output> 
+<div id="occurances"></div>
+</div>
+</body>
+
+
+</h1>
+
+
+</body> 
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <style>
+    .centered
+    {
+        color: red;
+        background-color: skyblue;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width:40%;
+        margin-left: 28%
+        
+    }
+    </style>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Miken combinaatio ja permutaatio yritys</title>
+</head>
+
+<body class="centered">
+    <div class="navbar">
+        <a href="entia.html">Combinatorics</a>
+        <a href="Nappinumerot.html">Number table</a>
+    </div>
+    <div class="combination permutation">
+        <div class="main-container">
+            <h1>Combination and permutation Calculator</h1>
+            <form class="calculator">
+                <table class="combipermicalcu">
+                    <tbody>
+                        <tr>
+                          <td>
+                            <label id="combo-title">Combinations and Permutations</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>Total number of different objects (m)</label>
+                          </td>
+                          <td>
+                            <input
+                              id="m-input"
+                              class="input-box"
+                              inputmode="numeric"
+                              type="text"
+                              oninput="validate_input()"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label id="label_1">Number of elements taken (n)</label>
+                          </td>
+                          <td>
+                            <input
+                              id="n-input"
+                              class="input-box"
+                              inputmode="numeric"
+                              type="text"
+                              oninput="validate_input()"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label id="label_2"
+                              >Ordered samples with replacement of size (r)</label
+                            >
+                          </td>
+                          <td>
+                            <input
+                              id="r-input"
+                              class="input-box"
+                              inputmode="numeric"
+                              type="text"
+                              oninput="validate_input()"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button
+                              id="reset-btn"
+                              class="btn"
+                              type="button"
+                              title="reset"
+                              onclick="reset_button()"
+                            >
+                              Reset
+                            </button>
+                            <button
+                              id="combination-btn"
+                              class="btn"
+                              type="button"
+                              title="combination"
+                              onclick="combination()"
+                            >
+                              Calculate Combinations
+                            </button>
+                            <button
+                              id="permutation-btn"
+                              class="btn"
+                              type="button"
+                              title="permutation"
+                              onclick="permutation()"
+                            >
+                              Calculate Permutations
+                            </button>
+                            <!-- <select id="sampling" onclick="set_options()">
+                              <option value="with">Sampling with replacement</option>
+                              <option value="without"
+                                >Sampling without replacement</option
+                              >
+                            </select> -->
+                            <label for="toggle" class="toggle">
+                              <input
+                                type="checkbox"
+                                id="toggle"
+                                class="toggle__input"
+                                value="with"
+                                onclick="set_options()"
+                              />
+                              <span class="toggle__button">Activate Sampling</span>
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <textarea
+                              name="answer"
+                              id="answer"
+                              cols="46"
+                              rows="2"
+                            ></textarea>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+<script src="entia.js"></script>
+</body class=centered >
+</html>

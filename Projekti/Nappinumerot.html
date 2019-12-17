@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.centered
+{
+    text-align: center;
+    margin: 64px auto;
+    color: red;
+}
+</style>
+<script>
+    
+    function change_text()
+    {
+        document.getElementById("table").hidden = !document.getElementById("table").hidden ;
+        var string1 ="" ; 
+        var string2 ="" ;
+        var string3 ="" ;
+        var string4 ="" ;
+
+        for(i = 0; i < 51; i++)
+        {
+            string1 = string1 +  i + "<br/>" ; 
+            string2 = string2 +  i.toString(2) + "<br/>" ; 
+            string3 = string3 +  i.toString(8) + "<br/>" ; 
+            string4 = string4 +  i.toString(16) + "<br/>" ;
+        }
+        document.getElementById("Decimal").innerHTML=string1 ;
+        document.getElementById("Binary").innerHTML=string2 ;
+        document.getElementById("Octal").innerHTML=string3 ;
+        document.getElementById("Hexadecimal").innerHTML=string4 ;
+    }
+
+</script>
+</head>
+<body style="background-color: skyblue;">
+    <div class="navbar">
+        <a href="entia.html">Combinatorics</a>
+        <a href="Nappinumerot.html">Number table</a>
+    </div>
+    <h1 id=text_on_screen class=centered>This button will print out numbers from 0 to 50 in Normal-, Binary-, Octal-, and Hexadecimal systems.</h1>
+    <div class=centered>
+        <button onclick="change_text()">Press</button>
+        <h2>
+        <table hidden=true id="table">
+            <tr> 
+                <th>Decimal</th> 
+                <th>Binary</th>
+                <th>Octal</th>
+                <th>Hexadecimal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="Decimal"></div> 
+                </td>
+                <td>
+                    <div id="Binary"></div> 
+                </td>
+                <td>
+                    <div id="Octal"></div> 
+                </td>
+                <td>
+                    <div id="Hexadecimal"></div> 
+                </td>
+            </tr>
+        </table>
+        </h2>
+    </div>
+</body>
+</html>
