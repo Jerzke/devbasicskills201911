@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+        var a  =[ false, false]
+        var b =[ false, true]
+        var c  = [ true, false]
+        var d = [ true, true]
+        var outputTexta, outputTextb, outputTexta, outputTexta;
+
+        // AND 
+        
+        function validate() {
+        (  a === 1 )  ? outputTexta = true : outputTexta = false
+        (  b === 1)   ? outputTextb = true : outputTextb = false
+
+       // OR
+         ( false || false )  ;  
+        ( false || true )  ;
+         ( true || false ) ;  
+        ( true || true) ; 
+
+
+        //NAND
+
+
+        
+        
+
+    
+    
+
+
+      document.getElementById("output_text").innerHTML = outputTexta;
+      document.getElementById("output_textb").innerHTML = outputTextb;
+
+
+
+        }
+    </script>
+  
+</head>
+
+<body onload="validate()" >
+    
+    
+    
+  <table>
+  <tr class="head">
+    <th>A</th>
+    <th>B</th>
+    <th>AND</th>
+    <th>OR</th>
+    <th>NAND</th>
+    <th>NOR</th>
+    <th>XOR</th>
+    <th>XNR</th>
+  </tr>
+  <tr >
+    <td>0</td>
+    <td>0</td>
+    <td  id="output_text" >  </td>
+   
+  </tr>
+  <tr class="row">
+    <td>0</td>
+    <td>1</td>
+    <td  id="output_textb" > </td>
+    
+   
+  </tr>
+  <tr >
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr >
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  
+   
+  </table>
+  
+  
+
+   
+</body>
+
+</html>
